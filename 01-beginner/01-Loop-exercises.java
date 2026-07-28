@@ -187,3 +187,47 @@ public class LoopExercises
 
     }
 }
+
+
+
+/*
+       -------------------- Output --------------------
+      
+            === Multiplication Table (4x4) ===
+            1	2	3	4	
+            2	4	6	8	
+            3	6	9	12	
+            4	8	12	16	
+
+
+            === Sum with Skip and Stop (n=50) ===
+            Sum: 108
+
+            
+            === Find in Matrix ===
+            Found at [1][1]
+            Not found
+
+            
+            === Factorial ===
+            5! = 120
+            10! = 3628800
+
+
+            === Pyramid (5 rows) ===
+                *
+               ***
+              *****
+             *******
+            *********
+
+            
+            === Iterate Backwards ===
+            5, 4, 3, 2, 1
+
+            
+            === Count Until Match ===
+            Attempts to find 42: 182
+   
+   
+   */
