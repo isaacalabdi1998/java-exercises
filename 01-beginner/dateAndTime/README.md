@@ -7,4 +7,5 @@
 
 asdasd **asasdasdd** asdasdasdasdasdasdas  __asdasdasdsad__ asdsadasdasdasdasdsadsadasd 
 The background color is `#ffffff` for light mode and `#000000` for dark mode.
+<span style="color:red;">هذا نص أحمر</span>
 
