@@ -8,3 +8,16 @@ Welcome to my Java repository! This repository contains my solutions to hands-on
 * **Academy:** [Amigoscode Academy](https://amigoscode.com/)
 * **Instructor & Mentor:** Nelson Djalo
 * **Community:** [Amigoscode Community on Skool](https://www.skool.com/amigoscode-academy)
+
+
+This repository serves as a personal archive and showcase of my progress, code quality, and problem-solving skills acquired through Amigoscode's structured curriculum.
+
+---
+
+## 🎯 Objectives & Learning Outcomes
+
+- 🧠 **Core Fundamentals:** Data types, control flow, object-oriented programming (OOP), collections, and exception handling.
+- ⚙️ **Advanced Concepts:** Streams API, Lambdas, Functional Programming, Concurrency, and Generics.
+- 🛠️ **Modern Software Development:** Clean code principles, design patterns, testing (JUnit & AssertJ), and Spring Boot backend integration.
+
+---
