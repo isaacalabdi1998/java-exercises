@@ -31,3 +31,29 @@ public static void main(String[] args)
 
 }
 ```
+
+
+
+
+
+
+------
+2.	LocalTime     Represents a **TIME** (hour, minute, second and nanoseconds (HH-mm-ss-ns))
+
+```java
+import java.time.LocalTime;
+public class MainDates
+{
+    public static void main(String[] args)
+    {
+        LocalTime time = LocalTime.now();
+            
+        System.out.println(time);             // 21:34:15.195045600
+        System.out.println(time.getNano());   // 195045600
+        System.out.println(time.getSecond()); // 15
+        System.out.println(time.getMinute()); // 34
+        System.out.println(time.getHour());   // 21   
+    }    
+}
+
+```
