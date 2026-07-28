@@ -7,9 +7,8 @@ Welcome to my Java repository! This repository contains my solutions to hands-on
 
 ## 📌 Overview & Context
 
-* **Academy:** [Amigoscode Academy](https://amigoscode.com/)
+* **Academy:** [Amigoscode Academy](https://skool.com/amigoscode-academy).
 * **Instructor & Mentor:** [Nelson Djalo](https://www.linkedin.com/in/nelsondjalo/)
-* **Community:** [Amigoscode Community on Skool](https://www.skool.com/amigoscode-academy)
 
 
 This repository serves as a personal archive and showcase of my progress, code quality, and problem-solving skills acquired through Amigoscode's structured curriculum.
