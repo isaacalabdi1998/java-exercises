@@ -12,7 +12,7 @@ Welcome to my Java repository! This repository contains my solutions to hands-on
 
 This repository serves as a personal archive and showcase of my progress, code quality, and problem-solving skills acquired through Amigoscode's structured curriculum.
 
----
+
 
 ## 🎯 Objectives & Learning Outcomes
 
@@ -20,4 +20,4 @@ This repository serves as a personal archive and showcase of my progress, code q
 - ⚙️ **Advanced Concepts:** Streams API, Lambdas, Functional Programming, Concurrency, and Generics.
 - 🛠️ **Modern Software Development:** Clean code principles, design patterns, testing (JUnit & AssertJ), and Spring Boot backend integration.
 
----
+
