@@ -7,7 +7,7 @@
 
 
 ------
-1. **LocalDate** Represents a **date** (yyyy-MM-dd) )
+1. LocalDate Represents a **DATE** (yyyy-MM-dd) )
 
 ```java
 import java.time.LocalDate;
@@ -23,9 +23,9 @@ public static void main(String[] args)
     System.out.println(date.getMonth());      // JULY
     System.out.println(date.getYear());       // 2026
     
-    System.out.println(date.minusDays(7));     // 2026-07-21
+    System.out.println(date.minusDays(7));    // 2026-07-21
     System.out.println(date.minusWeeks(7));   // 2026-06-09
-    System.out.println(date.minusMonths(7)); // 2025-12-28
+    System.out.println(date.minusMonths(7));  // 2025-12-28
     System.out.println(date.minusYears(7));   // 2019-07-28
 
 
