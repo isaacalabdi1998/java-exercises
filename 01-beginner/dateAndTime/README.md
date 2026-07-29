@@ -8,7 +8,7 @@
 
 
 ------
-## 1. LocalDate `Represents a DATE (yyyy-MM-dd) )`
+## 1. LocalDate `Represents a DATE (yyyy-MM-dd) )` 📅
 
 ```java
 import java.time.LocalDate;
@@ -42,7 +42,7 @@ public static void main(String[] args)
 
 
 ------
-## 2.	LocalTime `Represents a TIME (hour, minute, second and nanoseconds (HH-mm-ss-ns))`
+## 2.	LocalTime `Represents a TIME (hour, minute, second and nanoseconds (HH-mm-ss-ns))`🕑
 
 *2.1 LocalTime In my time zone*
 ```java
@@ -124,7 +124,7 @@ public static void main(String[] args)
 
 
 
-## 3.	LocalDateTime `Represents both a DATE & TIME (yyyy-MM-dd-HH-mm-ss-ns)`
+## 3.	LocalDateTime `Represents both a DATE & TIME (yyyy-MM-dd-HH-mm-ss-ns)`📅🕑
 ```java
 import java.time.Month;  
 import java.time.LocalDateTime;
