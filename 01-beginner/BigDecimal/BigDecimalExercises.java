@@ -170,4 +170,34 @@ public class BigDecimalExercises
     }
   
 }
+/*
+       -------------------- Output --------------------
+      
+        === Create from String ===
+        Price: 19.99
 
+        === Addition ===
+        10.50 + 3.75 = 14.25
+        
+        === Multiplication ===
+        19.99 * 3 = 59.97
+        
+        === Division with Rounding ===
+        10 / 3 (2 decimals): 3.33
+        10 / 3 (5 decimals): 3.33333
+        
+        === Comparison ===
+        2.0 compareTo 2.00: 0
+        2.0 equals 2.00: false (WRONG way to compare!)
+        
+        === Double To BigDecimal ===
+        0.79
+        
+        === Double Problem ===
+        BigDecimal from double : 0.1000000000000000055511151231257827021181583404541015625
+        BigDecimal from String : 0.1
+        -The double value 0.1 cannot be represented exactly in binary.
+        -Therefore, new BigDecimal(0.1) stores the approximate binary value.
+        -Using new BigDecimal("0.1") preserves the exact decimal value.
+   
+   */
