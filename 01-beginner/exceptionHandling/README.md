@@ -72,6 +72,7 @@ Used to:
 -   Close database connections
 -   Release resources
 <br>
+
 ## 4. throw
 Used to **manually create** an exception.
 
