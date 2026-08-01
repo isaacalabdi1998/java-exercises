@@ -163,8 +163,8 @@ catch (ArithmeticException | NullPointerException | ArrayIndexOutOfBoundsExcepti
 
 ###  C. Golden Rule
 Both fall under the Throwable -> Exception category. The main difference is that Unchecked inherits directly from RuntimeException, while Checked inherits directly from Exception (and does not support RuntimeException).
->  **Checked Exceptions** →  You **must** use `try-catch` or `throws`.
->  **Unchecked Exceptions** → Handling is **optional**, but highly recommended.
+>  - **Checked Exceptions** →  You **must** use `try-catch` or `throws`.
+>  - **Unchecked Exceptions** → Handling is **optional**, but highly recommended.
 
 
 
