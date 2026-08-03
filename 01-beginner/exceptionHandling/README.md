@@ -143,12 +143,12 @@ catch (ArithmeticException | NullPointerException | ArrayIndexOutOfBoundsExcepti
 <br>
 
 
-##  8. Checked vs Unchecked Exceptions
-### Exception Hierarchy in Java
+##  8. Throwable Exceptions Class
+### 8.1 Exception Hierarchy in Java
 <img width="1619" height="972" alt="checkedVsUnchecked" src="https://github.com/user-attachments/assets/6eb19f65-6bb9-41c8-b228-d8696a3e71e1" />
----
-## 📌 المخطط الهيكلي (Diagram)
 
+<br>
+### 8.2 Checked vs Unchecked Exceptions
 ### A. Checked Exceptions
 
 - Checked by the compiler.
@@ -171,6 +171,44 @@ Both fall under the Throwable -> Exception category. The main difference is that
 >  - **Checked Exceptions** →  You **must** use `try-catch` or `throws`.
 >  - **Unchecked Exceptions** → Handling is **optional**, but highly recommended.
 
+<br>
+
+### 8.3 Java Checked Exceptions Example
+```java
+import java.io.BufferedReader;  
+import java.io.FileReader;  
+import java.io.IOException;
+
+public static void main(String[] args)
+{
+	try
+	{
+			// Open the file  
+			BufferedReader reader = new BufferedReader(new FileReader("data.txt"));
+
+			// Read the file content
+			String line;  
+			while ((line = reader.readLine()) != null)  
+			{  
+				System.out.println(line);  
+			}  
+
+			// Close file  
+			reader.close();
+	}
+	catch (IOException e)
+	{
+			System.out.println("An error occurred while reading the file.");  
+			System.out.println("The reason: " + e.getMessage());
+	}
+	finally
+	{
+			System.out.println("The program has finished.");
+	}
+
+}
+```
+>This program reads a text file and displays its contents. It uses a try-catch block to handle **checked exception** such as **`IOException`**.
 
 
 
