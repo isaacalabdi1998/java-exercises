@@ -148,6 +148,7 @@ catch (ArithmeticException | NullPointerException | ArrayIndexOutOfBoundsExcepti
 <img width="1619" height="972" alt="checkedVsUnchecked" src="https://github.com/user-attachments/assets/6eb19f65-6bb9-41c8-b228-d8696a3e71e1" />
 
 <br>
+
 ### 8.2 Checked vs Unchecked Exceptions
 ### A. Checked Exceptions
 
