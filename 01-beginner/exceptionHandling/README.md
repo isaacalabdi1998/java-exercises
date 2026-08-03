@@ -239,4 +239,67 @@ public static void main(String[] args)
 }
 ```
 
+# Checked vs Unchecked Exceptions in Java
+The difference is **not** between `throw` and `throws`.  
+The real difference is the **type of exception**.
+### Unchecked Exceptions (`RuntimeException`)
+Exceptions that extend `RuntimeException` are called **Unchecked Exceptions**.
 
+```java
+class MyUncheckedException extends RuntimeException 
+{ 
+}
+```
+
+The compiler **does not require** you to declare them with `throws`.
+
+```java
+public static int divide(int a, int b) 
+{ 
+	if (b == 0) 
+	{ 
+			throw new MyUncheckedException("Cannot divide by zero"); 
+	} 
+	return a / b; 
+}
+```
+<br>
+
+### Checked Exceptions (`Exception`)
+Exceptions that extend `Exception` (but not `RuntimeException`) are called **Checked Exceptions**.
+
+```java
+class MyCheckedException extends Exception 
+{ 
+}
+```
+The compiler **requires** you to either:
+-   Declare the exception using `throws`, or
+-   Handle it using `try-catch`.
+
+```java
+public static int divide(int a, int b) throws MyCheckedException 
+{ 
+	if (b == 0) 
+	{ 
+		throw new MyCheckedException("Cannot divide by zero"); 
+	} 
+	return a / b; 
+}
+```
+If you remove `throws`, the compiler will report an error because a checked exception must be either **caught** or **declared**.
+
+## Quick Summary
+
+
+| Exception Type| Extends| `throws` Required?|
+|---|---|---|
+| Checked Exception | Exception | ✅ Yes |
+| Unchecked Exception | RuntimeException | ❌ No
+---
+
+### Rule to Remember
+
+-   `throw` → Actually throws an exception.
+-   `throws` → Declares that a method may throw a **checked** exception.
+-   `RuntimeException` and its subclasses do **not** require `throws`.
