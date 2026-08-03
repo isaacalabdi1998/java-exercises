@@ -149,7 +149,6 @@ catch (ArithmeticException | NullPointerException | ArrayIndexOutOfBoundsExcepti
 
 <br>
 
-### 8.2 Checked vs Unchecked Exceptions
 ### A. Checked Exceptions
 
 - Checked by the compiler.
@@ -174,7 +173,7 @@ Both fall under the Throwable -> Exception category. The main difference is that
 
 <br>
 
-### 8.3 Java Checked Exceptions Example
+### 8.2 Java Checked Exceptions Example
 ```java
 import java.io.BufferedReader;  
 import java.io.FileReader;  
