@@ -173,7 +173,7 @@ Both fall under the Throwable -> Exception category. The main difference is that
 
 <br>
 
-### 8.2 Java Checked Exceptions Example
+### 8.2 Checked Exceptions Example
 ```java
 import java.io.BufferedReader;  
 import java.io.FileReader;  
@@ -211,7 +211,31 @@ public static void main(String[] args)
 >This program reads a text file and displays its contents. It uses a try-catch block to handle **checked exception** such as **`IOException`**.
 
 
+### 8.3 Unchecked Exceptions Example
+
+```java
+public static void main(String[] args)
+{
+	try
+	{
+			// Divide by zero
+            int x = 10 / 05;
+
+			// Invalid array index
+            int[] arr = new int[5];
+            arr[10] = 50;
+
+			// Invalid string-to-number conversion
+            int number = Integer.parseInt("7x");
+            System.out.println(number);
+	}
+	catch (ArithmeticException | ArrayIndexOutOfBoundsException | ClassCastException e)
+	{
+			System.out.println("The reason: " + e.getMessage());
+	}
 
 
+}
+```
 
 
