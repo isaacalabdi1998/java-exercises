@@ -145,7 +145,40 @@ catch (ArithmeticException | NullPointerException | ArrayIndexOutOfBoundsExcepti
 
 ##  8. Checked vs Unchecked Exceptions
 <img width="1619" height="972" alt="checkedVsUnchecked" src="https://github.com/user-attachments/assets/6eb19f65-6bb9-41c8-b228-d8696a3e71e1" />
+---
+## 📌 المخطط الهيكلي (Diagram)
 
+```text
+                           ┌──────────┐
+                           │  Object  │
+                           └────┬─────┘
+                                │
+                          ┌─────┴─────┐
+                          │ Throwable │
+                          └─────┬─────┘
+                                │
+         ┌──────────────────────┴──────────────────────┐
+         │                                             │
+   ┌─────┴──────┐                                ┌─────┴──────┐
+   │ Exceptions │                                │   Errors   │
+   └─────┬──────┘                                └─────┬──────┘
+         │                                             ├─ StackOverflowError
+         ├──────────────────────────────┐              ├─ VirtualMachineError
+         │                              │              └─ OutOfMemoryError
+ ┌───────┴──────────┐        ┌──────────┴────────────┐
+ │ Checked          │        │ Unchecked             │
+ │ Exceptions       │        │ Exceptions            │
+ └───────┬──────────┘        └──────────┬────────────┘
+         ├─ IOException                 ├─ ArithmeticException
+         ├─ SQLException                ├─ NullPointerException
+         └─ ClassNotFoundException      └─ IndexOutOfBoundsException
+                                                   ├─ ArrayIndexOutOfBoundsException
+                                                   └─ StringIndexOutOfBoundsException
+
+
+
+
+```
 ### A. Checked Exceptions
 
 - Checked by the compiler.
