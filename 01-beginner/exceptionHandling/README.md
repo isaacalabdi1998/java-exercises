@@ -239,7 +239,9 @@ public static void main(String[] args)
 }
 ```
 
-# Checked vs Unchecked Exceptions in Java
+<br>
+
+## 9. Checked vs Unchecked Exceptions in Java
 The difference is **not** between `throw` and `throws`.  
 The real difference is the **type of exception**.
 ### Unchecked Exceptions (`RuntimeException`)
