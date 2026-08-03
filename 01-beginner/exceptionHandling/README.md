@@ -210,6 +210,7 @@ public static void main(String[] args)
 ```
 >This program reads a text file and displays its contents. It uses a try-catch block to handle **checked exception** such as **`IOException`**.
 
+<br>
 
 ### 8.3 Unchecked Exceptions Example
 
