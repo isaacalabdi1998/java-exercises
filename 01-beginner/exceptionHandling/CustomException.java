@@ -127,3 +127,20 @@ public class CustomException
 
 
 }
+
+/*
+    -------------------------------- Output --------------------------------
+    
+    ===== Custom Checked Exception (InsufficientFundsException) =====
+        Successfully withdrawn $50. Remaining balance: $50.0
+        Caught Exception: Insufficient funds for withdrawal.
+        Shortage Amount: $25.0
+        Age 25 is valid.
+        Caught Exception: Age must be between 0 and 150. Provided: -5
+    
+    ===== Exception Chaining =====
+        Caught Outer Exception: Failed to parse age from input string
+        Underlying Cause: java.lang.NumberFormatException: For input string: "abc"
+
+
+*/
