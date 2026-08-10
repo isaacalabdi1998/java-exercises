@@ -79,8 +79,7 @@ public class EnumExercises
         System.out.println("\n=== Iterate Over Enum Values ===");
         for (Season s : Season.values())
         {
-            System.out.println(s.ordinal() + ": " + s + " - " + s.getDescription()
-            );
+            System.out.println(s.ordinal() + ": " + s + " - " + s.getDescription());
         }
 
         System.out.println("\n=== Priority Values ===");
