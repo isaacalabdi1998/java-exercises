@@ -20,11 +20,9 @@ public static void main(String[] args)
 <br>
 
 
-```markdown
 > [!WARNING]
 > Avoiding NullPointerException.
-> Check for `null` before using the object:
-```
+> Check for `null` before using the object.
 
 
 ```java
