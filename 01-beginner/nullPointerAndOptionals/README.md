@@ -36,10 +36,10 @@ public static void main(String[] args)
 ```
 
 
-```markdown
+
 > [!TIP]
 > However, Java provides `Optional` as a cleaner way to represent a value that may or may not exist.
-```
+
 
 
 <br>
