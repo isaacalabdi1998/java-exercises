@@ -100,10 +100,12 @@ public static void main(String[] args)
 }
 ```
 
-```markdown
+
+
 > [!IMPORTANT]
 > Optional.of(value); // value must NOT be null
-```
+
+
 
 <br>
 
@@ -135,11 +137,13 @@ public static void main(String[] args)
 ```
 
 
-```markdown
+
+
 > [!IMPORTANT]
 > Optional.ofNullable(value);
 > Use this when you are **not sure whether the value is null**.
-```
+
+
 
 <br>
 <br>
