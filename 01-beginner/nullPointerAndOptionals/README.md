@@ -1,10 +1,6 @@
-# Null Pointer & Optionals in Java
-
-
 ## 1. What is Null Pointer
 
 A **NullPointerException (NPE)** happens when you try to use an object reference that is **`null`**.
-
 ```java
 public static void main(String[] args)
 {
@@ -18,7 +14,6 @@ public static void main(String[] args)
 }
 ```
 <br>
-
 
 > [!WARNING]
 > Avoiding NullPointerException.
@@ -34,281 +29,160 @@ public static void main(String[] args)
 	}
 }
 ```
-
-
 <br>
-
 
 > [!TIP]
 > However, Java provides `Optional` as a cleaner way to represent a value that may or may not exist.
 
-
-
 <br>
 
 
-## 2. Optional
 
-**`Optional<T>`** is a container that can hold:
+## 2. Declare & initialize Optional
 
--   A value
--   No value (`empty`)
+
+**`Optional<T>`**  
+
+ Where **T** the type of data
+- Optional `<String>` ...
+- Optional `<Integer>` ...
+- Optional `<Double>` ...
+- Optional `<LocalDate>`...
+	
+
+
+
+
+### There are 3 Optional  static methods should use when declare an `Optional`
+```java
+1- Optional.of()
+2- Optional.ofNullable()
+3- Optional.empty()
+```
 
 <br>
 
-It coulde be....
-- Optional`<String>`...
-- Optional`<Integer>`...
-- Optional`<LocalDate>`...
+**1-**  Use **`of()`** when you know the value is **not null**.
+
+```js
+/*------- true way -------*/
+String  name1  =  "i love java";
+Optional<String> opt2 = Optional.of(name1);
 
 
-
-```java
-public static void main(String[] args)
-{
-	Optional<String> name = Optional.of("Isaac");
-}
+/* ----- wrong way ---------*/
+String name2 = null;
+Optional<String> opt1 = Optional.of(name2);  // NullPointerException
 ```
 
-Think of it as:
-
-```
-Optional<String>
-    ├── value
-    └── empty
-```
-<br>
-
-### 2.1. `Optional.of()`
-
-
-
-
-Use **`of()`** when you **know the value is NOT null**.
-
-```java
-Optional<String> name = Optional.of("John");
-```
-
-If the value is `null`, it throws `NullPointerException`:
-
-```java
-public static void main(String[] args)
-{
-	String name = null;
-	Optional<String> optional = Optional.of(name);  // NullPointerException
-}
-```
-
+> [!WARNING]
+> If the value is `null`, it throws `NullPointerException`:
 
 
 > [!IMPORTANT]
 > Optional.of(value); // value must NOT be null
 
-
-
 <br>
 
 
 
-### 2.2 `Optional.ofNullable()`
 
+**2-**  Use **`ofNullable()`** when the value **might be null**.
 
-Use `ofNullable()` when the value **might be null**.
-
-```java
-public static void main(String[] args)
-{
-	String name = null; 
-	Optional<String> optional = Optional.ofNullable(name);
-}
+```js
+ String name = null;
+ Optional<String> opt= Optional.ofNullable(name);
+ 
+ System.out.println(opt.isEmpty()); // true
 ```
-
-
-
-Example:
-
-```java
-public static void main(String[] args)
-{
-	String name = getName();
-	Optional<String> optionalName = Optional.ofNullable(name);
-}
-```
-
-
-
 
 > [!IMPORTANT]
 > Optional.ofNullable(value);
 > Use this when you are **not sure whether the value is null**.
 
 
-
-<br>
 <br>
 
-### 2.3 `Optional.empty()`
 
 
-Creates an `Optional` with **no value**.
-Optional<String> name = Optional.empty();
-It is equivalent to:
-```
-Optional<String>
-       ↓
-    no value
-```
-You can use it when you intentionally want to return "nothing":
+**3-**  Use **`empty()`**  when need to create `Optional` with **no value**.
 
 ```java
-public Optional<String> findName() 
-{ 
-	return Optional.empty(); 
-}
+Optional<String> empty = Optional.empty();
+```
+
+
+<br>
+
+
+## 3. Important Methods in Optional
+
+
+ **`isPresent()`**
+ 
+If a value is present, returns `true`, otherwise `false`.
+
+<br>
+
+**`isEmpty()`**
+Checks whether there is no value.
+
+<br>
+
+**`get()`**
+If a value is present, returns the value.
+
+> [!WARNING]
+> throws `NoSuchElementException` if a value is not present.
+
+
+<br>
+
+**`orElse()`**
+Provides a default value if the `Optional` is empty.
+
+
+```js
+String nullName = null;  
+String name = Optional.ofNullable(nullName).orElse("java-8");  
+  
+System.out.println(name);  
+/* Output:   java-8   */
 ```
 
 <br>
 
-## 3. Quick Comparison
+**`orElseThrow()`**
+
+Throws an exception if the value is missing.
+If a value is present, returns the value, otherwise throws `NoSuchElementException`
+
+```js
+String nullName = null;  
+String name = Optional.ofNullable(nullName).orElseThrow();
+```
+
+
+> [!WARNING]
+> throws `NoSuchElementException` if a value is not present.
+
+
+
+<br>
+<br>
+
+
+## 4. Quick Comparison
+
+
 
 
 | Method| Null allowed?| Result|
 |---|---|---|
-| Optional.empty() |  —  | Always empty |
-| Optional.of(value) | ❌ No |  Contains value
-| Optional.ofNullable(value) | ✅ Yes | Value or empty
----
-
-### Remember
-```java
-Optional.of("Java"); // value must exist 
-Optional.empty();    // no value
-Optional.ofNullable(value); // value may be null 
-```
-
-<br>
-
-
-
-## 4. Checking an Optional
-
-### `isPresent()`
-
-
-Checks whether a value exists.
-```java
-if (optionalName.isPresent()) 
-{
-    System.out.println(optionalName.get());  
-    // if a value is present, returns the value.
-}
-```
-
-
-### `isEmpty()`
-
-Checks whether there is no value.
-
-```java
-if (optionalName.isEmpty()) 
-{
-    System.out.println("No name");
-}
-```
-
-
-> **`isEmpty()`** is available since Java 11.
-
-<br>
-
-## 5. Getting a Value Safely
-
-
-### `orElse()`
-
-Provides a default value if the `Optional` is empty.
-
-```java
-String name = Optional.ofNullable(null).orElse("Unknown");
-```
-
-Result:
-```
-Unknown
-```
-<br>
-
-### `orElseGet()`
-
-Creates the default value only when needed.
-
-```java
-String name = Optional.ofNullable(null).orElseGet(() -> "Unknown");
-```
-
-<br>
-
-### `orElseThrow()`
-
-Throws an exception if the value is missing.
-
-```java
-String name = Optional.ofNullable(null).orElseThrow();
-```
-
+| Optional.**of(`value`)** | ❌ No   | Contains value |
+| Optional.**ofNullable(`value`)** | ✅ Yes |  Value or empty
+| Optional.**empty()**  | — | Always empty
 
 
 <br>
-
-
-## 6. Best Practice
-
-
-Use:
-
-```java
-Optional.of(value);
-```
-
-when you **guarantee**  `value` is not null.
-
-
 <br>
-Use:
-
-```java
-Optional.ofNullable(value);
-```
-
-when `value`  **may be null**.
-
-
-<br>
-Use:
-
-```java
-Optional.empty();
-```
-
-when you intentionally want to represent **no value**.
-
-<br>
-
-### The main idea
-
-```
-null
- ↓
-can cause NullPointerException
-
-Optional
- ↓
-represents "value or no value" explicitly
-```
-
-**Quick memory rule:**
-
-> **`of()`** = definitely a value  
-> **`ofNullable()`** = maybe a value  
-> **`empty()`** = no value
