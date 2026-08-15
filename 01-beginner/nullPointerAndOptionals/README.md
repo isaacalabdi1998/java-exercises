@@ -67,20 +67,20 @@ public static void main(String[] args)
 ```js
 /*------- true way -------*/
 String  name1  =  "i love java";
-Optional<String> opt2 = Optional.of(name1);
+Optional<String> opt1 = Optional.of(name1);
 
 
 /* ----- wrong way ---------*/
 String name2 = null;
-Optional<String> opt1 = Optional.of(name2);  // NullPointerException
+Optional<String> opt2 = Optional.of(name2);  // NullPointerException
 ```
 
 > [!WARNING]
 > If the value is `null`, it throws `NullPointerException`:
 
 
-> [!IMPORTANT]
-> Optional.of(value); // value must NOT be null
+> [!CAUTION]
+> `Optional.of(value);`   value must NOT be null
 
 <br>
 
