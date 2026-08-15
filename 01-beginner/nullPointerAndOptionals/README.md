@@ -83,7 +83,7 @@ Optional<String> opt2 = Optional.of(name2);  // NullPointerException
 > `Optional.of(value);`   value must NOT be null
 
 <br>
-
+<br>
 
 
 
@@ -102,7 +102,7 @@ Optional<String> opt2 = Optional.of(name2);  // NullPointerException
 
 
 <br>
-
+<br>
 
 
 **3-**  Use **`empty()`**  when need to create `Optional` with **no value**.
@@ -112,6 +112,7 @@ Optional<String> empty = Optional.empty();
 ```
 
 
+<br>
 <br>
 
 
@@ -123,10 +124,12 @@ Optional<String> empty = Optional.empty();
 If a value is present, returns `true`, otherwise `false`.
 
 <br>
+<br>
 
 **`isEmpty()`**
 Checks whether there is no value.
 
+<br>
 <br>
 
 **`get()`**
@@ -136,6 +139,7 @@ If a value is present, returns the value.
 > throws `NoSuchElementException` if a value is not present.
 
 
+<br>
 <br>
 
 **`orElse()`**
@@ -150,6 +154,7 @@ System.out.println(name);
 /* Output:   java-8   */
 ```
 
+<br>
 <br>
 
 **`orElseThrow()`**
