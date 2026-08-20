@@ -12,7 +12,7 @@
  * - Defensive copying (when applicable)
  */
 
-public class ImmutablePerson
+public final class ImmutablePerson
 {
     // 1 - Private final fields
     private final String name;
