@@ -7,7 +7,7 @@
 
 
 import java.time.LocalDate;
-public class RentalContract
+public final class RentalContract
 {
     // 1 - Create private final fields
     private final String tenantName;
