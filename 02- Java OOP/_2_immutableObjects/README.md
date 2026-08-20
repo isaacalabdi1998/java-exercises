@@ -9,7 +9,7 @@ For example:
 ```java
 public static void main(String[] args)
 {
-	ImmutablePerson person = new ImmutablePerson("Alice", 25, "ali@gmail.com");
+	ImmutablePerson person = new ImmutablePerson("Alice", 25, "alice@gmail.com");
 }
 ```
 
