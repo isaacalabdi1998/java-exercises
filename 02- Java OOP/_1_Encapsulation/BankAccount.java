@@ -12,7 +12,7 @@ package _1_encapsulation;
  * - Private helper methods
  */
 
-public class BankAccount
+public final class BankAccount
 {
 
   
