@@ -6,6 +6,7 @@ public interface Database
 
 
 
+
 // -------Step 2: We configure the various applications -------
 public class MySQLDatabase implements Database
 {
@@ -16,7 +17,6 @@ public class MySQLDatabase implements Database
       }
 }
 
-
 public class MongoDatabase implements Database
 {
       @Override
@@ -25,6 +25,17 @@ public class MongoDatabase implements Database
           System.out.println("The data was saved in MongoDB: " + data);
       }
 }
+
+public class PostgreSQLDatabase implements Database
+{
+    @Override
+    public void save(String data)
+    {
+        System.out.println("The data was saved in Postgres: " + data);
+    }
+}
+
+
 
 
 // -------Step 3: UserService no longer creates the rule itself; it receives it from an external source-------
@@ -49,7 +60,6 @@ public class UserService
 
 
 
-
 // ---------- Main Class ----------
 public class Main
 {
@@ -58,15 +68,20 @@ public class Main
       {
   
           // We can choose MySQL, or we can choose MongoDB, without touching the UserService code at all!
-          MySQLDatabase sqlDB = new MySQLDatabase();
-          MongoDatabase monDB = new MongoDatabase();
+          MySQLDatabase       sqlDB  = new MySQLDatabase();
+          MongoDatabase       monDB  = new MongoDatabase();
+          PostgreSQLDatabase  postDB = new PostgreSQLDatabase();
   
           UserService service1 = new UserService(sqlDB);
           UserService service2 = new UserService(monDB);
+          UserService service3 = new UserService(postDB);
   
           service1.registerUser("Ahmed");  // The data was saved in MySQL: Ahmed
           service2.registerUser("Ali");    // The data was saved in MongoDB: Ali
+          service3.registerUser("Omer");   // The data was saved in Postgres: Omer
+    
       }
   
 }
+
 
